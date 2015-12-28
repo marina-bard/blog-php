@@ -13,8 +13,7 @@ class Storage
     {
     }
 
-    public static function getInstance()
-    {
+    public static function getInstance() {
         if (null === self::$instance) {
             self::$instance = new self();
         }
@@ -22,25 +21,25 @@ class Storage
         return self::$instance;
     }
 
-    public function setHandler($handler)
-    {
+    public function setHandler($handler) {
         $this->handler = $handler;
     }
 
-    public function readData()
-    {
+    public function readData() {
         return $this->handler->getAllPosts();
     }
 
-    public function writeData($title, $content)
-    {
+    public function writeData($title, $content) {
         $post = new Post(null, $title, date("Y-m-d H:i:s"), $content);
         $this->handler->addPost($post);
     }
 
-    public function deleteData($date)
-    {
+    public function deleteData($date) {
         $this->handler->delete($date);
+    }
+
+    public function connect() {
+        $this->handler->dbConnection();
     }
 }
 

@@ -5,8 +5,9 @@
     require_once("../include/storage/handler.php");
 	require_once("../include/storage/filehandler.php");
 	require_once("../include/storage/jsonhandler.php");
+	require_once("../include/storage/databasehandler.php");
 
-	Storage::getInstance()->setHandler(new JSonHandler());
+	Storage::getInstance()->setHandler(new DatabaseHandler());
 
 	$posts = Storage::getInstance()->readData();
 
