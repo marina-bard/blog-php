@@ -1,15 +1,14 @@
 <?php
 
-	require_once("handler.php");
-	require_once("filehandler.php");
-	require_once("jsonhandler.php");
-	require_once("storage.php");
-	require_once("posts.php");
-	require_once("post.php");
+    require_once("../include/model/post.php");
+    require_once("../include/storage/storage.php");
+    require_once("../include/storage/handler.php");
+	require_once("../include/storage/filehandler.php");
+	require_once("../include/storage/jsonhandler.php");
 
-	Storage::getInstance()->setHandler(new FileHandler());
+	Storage::getInstance()->setHandler(new JSonHandler());
 
-	$posts = getAllPosts();
+	$posts = Storage::getInstance()->readData();
 
 	if(isset($_GET['action']))
 		$action = $_GET['action'];
@@ -18,23 +17,16 @@
 
 	if($action == "add") {
 		if(!empty($_POST)) {
-			$posts = addNewPost($_POST['title'], $_POST['content']);
-		//	header("Location: index.php");
+            Storage::getInstance()->writeData($_POST['title'], $_POST['content']);
 		}
+	}
 
-		$posts = getAllPosts();
-		require_once("../view/index.html.php");
-	}
-	else if ($action == "delete") {
-		$date = $_GET['date'];
-		$posts = deletePost($date);
-		//header("Location: index.php");
-		$posts = getAllPosts();
-		require_once("../view/index.html.php");
+	if ($action == "delete") {
+		$id = $_GET['id'];
+        Storage::getInstance()->deleteData($id);
 	} 
-	else {
-		$posts = getAllPosts();
-		require_once("../view/index.html.php");
-	}
+
+	$posts = Storage::getInstance()->readData();
+	require_once("../view/index.html.php");
 
 ?>
