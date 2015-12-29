@@ -2,15 +2,16 @@
 
 class FileHandler implements Handler {
 
-    private $storagePath = '../storage/posts.txt';
-
+    public function getStoragePath() {
+        return Config::$fileStoragePath;
+    }
 
     public function getAllPosts() {
         return array_reverse($this->read());
     }
 
     public function read() {
-        $file = file_get_contents($this->storagePath);
+        $file = file_get_contents($this->getStoragePath());
         return $this->formPostsArray(explode("~", $file));
     }
 
@@ -24,7 +25,7 @@ class FileHandler implements Handler {
         }
         $data->setId($id);
         $string = (string)$data;
-        file_put_contents($this->storagePath, $string, FILE_APPEND | LOCK_EX);
+        file_put_contents($this->getStoragePath(), $string, FILE_APPEND | LOCK_EX);
     }
 
     public function delete($id) {
@@ -40,7 +41,7 @@ class FileHandler implements Handler {
             }
         }
         unset($array[$delPos]);
-        file_put_contents($this->storagePath, $string);
+        file_put_contents($this->getStoragePath(), $string);
     }
 
     public function formPostsArray($array) {

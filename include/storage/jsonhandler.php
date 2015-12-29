@@ -2,8 +2,9 @@
 
 	class JSonHandler implements Handler {
 
-		private $storagePath = '../storage/posts.json';
-
+        public function getStoragePath() {
+            return Config::$jsonStoragePath;
+        }
 
 		public function getAllPosts() {
 			$json = $this->read();
@@ -17,13 +18,13 @@
 		}
 
 		public function read() {
-			$json = file_get_contents($this->storagePath);
+			$json = file_get_contents($this->getStoragePath());
 			return json_decode($json, true);
 		}
 
         public function write($data) {
             $json = json_encode($data);
-            file_put_contents($this->storagePath, $json);
+            file_put_contents($this->getStoragePath(), $json);
         }
 
 		public function addPost($data) {

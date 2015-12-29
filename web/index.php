@@ -1,13 +1,12 @@
 <?php
 
-    require_once("../include/model/post.php");
-    require_once("../include/storage/storage.php");
-    require_once("../include/storage/handler.php");
-	require_once("../include/storage/filehandler.php");
-	require_once("../include/storage/jsonhandler.php");
-	require_once("../include/storage/databasehandler.php");
-
-	Storage::getInstance()->setHandler(new DatabaseHandler());
+    require_once ("../config/config.php");
+    require_once ("../include/model/post.php");
+    require_once ("../include/storage/storage.php");
+    require_once ("../include/storage/handler.php");
+	require_once ("../include/storage/filehandler.php");
+	require_once ("../include/storage/jsonhandler.php");
+	require_once ("../include/storage/databasehandler.php");
 
 	$posts = Storage::getInstance()->readData();
 

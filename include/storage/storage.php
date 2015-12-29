@@ -22,7 +22,19 @@ class Storage
     }
 
     public function setHandler($handler) {
-        $this->handler = $handler;
+        switch(Config::$handler){
+            case 'txt':
+                $this->handler = new FileHandler();
+                break;
+            case 'json':
+                $this->handler = new JSonHandler();
+                break;
+            case 'db':
+                $this->handler = new DatabaseHandler();
+                break;
+            default:
+                $this->handler = new FileHandler();
+        }
     }
 
     public function readData() {
@@ -36,10 +48,6 @@ class Storage
 
     public function deleteData($date) {
         $this->handler->delete($date);
-    }
-
-    public function connect() {
-        $this->handler->dbConnection();
     }
 }
 

@@ -2,14 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b22659c4-4ebb-4adc-9a59-553990b71ebf" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/config.php" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/web/filehandler.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/web/handler.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/web/jsonhandler.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/web/post.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/web/posts.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/web/storage.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/storage/databasehandler.php" afterPath="$PROJECT_DIR$/include/storage/databasehandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/storage/filehandler.php" afterPath="$PROJECT_DIR$/include/storage/filehandler.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/storage/handler.php" afterPath="$PROJECT_DIR$/include/storage/handler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/storage/jsonhandler.php" afterPath="$PROJECT_DIR$/include/storage/jsonhandler.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/storage/storage.php" afterPath="$PROJECT_DIR$/include/storage/storage.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storage/posts.json" afterPath="$PROJECT_DIR$/storage/posts.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.php" afterPath="$PROJECT_DIR$/web/index.php" />
     </list>
     <ignored path="blog-php.iws" />
@@ -32,11 +38,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.25">
-              <caret line="32" column="2" selection-start-line="32" selection-start-column="2" selection-end-line="32" selection-end-column="2" />
+            <state vertical-scroll-proportion="-0.09848485">
+              <caret line="8" column="60" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -45,8 +51,8 @@
       <file leaf-file-name="storage.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/storage/storage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-25.0">
-              <caret line="40" column="31" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
+            <state vertical-scroll-proportion="-0.625">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -55,8 +61,8 @@
       <file leaf-file-name="filehandler.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/storage/filehandler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.625">
-              <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+            <state vertical-scroll-proportion="-3.125">
+              <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -65,25 +71,45 @@
       <file leaf-file-name="handler.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/storage/handler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.375">
-              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+            <state vertical-scroll-proportion="-2.5">
+              <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="databasehandler.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="databasehandler.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/storage/databasehandler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8333333">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state vertical-scroll-proportion="-5.0">
+              <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
               <folding>
-                <marker date="1451346733399" expanded="true" signature="338:357" placeholder="SELECT * FRO... posts" />
-                <marker date="1451346733399" expanded="true" signature="999:1041" placeholder="INSERT INTO posts... " />
-                <marker date="1451346733399" expanded="true" signature="999:1062" placeholder="INSERT INTO posts... " />
-                <marker date="1451346733399" expanded="true" signature="1445:1479" placeholder="DELETE FROM " />
-                <marker date="1451346733399" expanded="true" signature="1451:1479" placeholder="INSERT INTO posts... " />
+                <marker date="1451348570287" expanded="true" signature="391:410" placeholder="SELECT * FRO... posts" />
+                <marker date="1451348570287" expanded="true" signature="995:1037" placeholder="INSERT INTO posts... " />
+                <marker date="1451348570287" expanded="true" signature="995:1058" placeholder="INSERT INTO posts... " />
+                <marker date="1451348570287" expanded="true" signature="1384:1418" placeholder="DELETE FROM " />
+                <marker date="1451348570287" expanded="true" signature="1390:1418" placeholder="INSERT INTO posts... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.5">
+              <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jsonhandler.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/storage/jsonhandler.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.5">
+              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="6" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -116,10 +142,13 @@
         <option value="$PROJECT_DIR$/web/filehandler.php" />
         <option value="$PROJECT_DIR$/storage/posts.json" />
         <option value="$PROJECT_DIR$/include/storage/DatabaseHandler.php" />
-        <option value="$PROJECT_DIR$/include/storage/storage.php" />
-        <option value="$PROJECT_DIR$/include/storage/handler.php" />
-        <option value="$PROJECT_DIR$/web/index.php" />
         <option value="$PROJECT_DIR$/include/storage/databasehandler.php" />
+        <option value="$PROJECT_DIR$/include/storage/storage.php" />
+        <option value="$PROJECT_DIR$/include/storage/jsonhandler.php" />
+        <option value="$PROJECT_DIR$/include/storage/filehandler.php" />
+        <option value="$PROJECT_DIR$/include/storage/handler.php" />
+        <option value="$PROJECT_DIR$/config/config.php" />
+        <option value="$PROJECT_DIR$/web/index.php" />
       </list>
     </option>
   </component>
@@ -276,6 +305,10 @@
               <option name="myItemId" value="blog-php" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -334,7 +367,7 @@
     <frame x="57" y="-4" width="1309" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11917494" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19022155" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -409,30 +442,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/storage/posts.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/storage/storage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.0">
-          <caret line="40" column="31" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.25">
-          <caret line="32" column="2" selection-start-line="32" selection-start-column="2" selection-end-line="32" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/index.html.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.0">
@@ -441,33 +450,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/storage/filehandler.php">
+    <entry file="file://$PROJECT_DIR$/storage/posts.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.625">
-          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/storage/jsonhandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="6" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/include/storage/handler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.375">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        <state vertical-scroll-proportion="-2.5">
+          <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/storage/filehandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.125">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/storage/storage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.625">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/include/storage/databasehandler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8333333">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state vertical-scroll-proportion="-5.0">
+          <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
           <folding>
-            <marker date="1451346733399" expanded="true" signature="338:357" placeholder="SELECT * FRO... posts" />
-            <marker date="1451346733399" expanded="true" signature="999:1041" placeholder="INSERT INTO posts... " />
-            <marker date="1451346733399" expanded="true" signature="999:1062" placeholder="INSERT INTO posts... " />
-            <marker date="1451346733399" expanded="true" signature="1445:1479" placeholder="DELETE FROM " />
-            <marker date="1451346733399" expanded="true" signature="1451:1479" placeholder="INSERT INTO posts... " />
+            <marker date="1451348570287" expanded="true" signature="391:410" placeholder="SELECT * FRO... posts" />
+            <marker date="1451348570287" expanded="true" signature="995:1037" placeholder="INSERT INTO posts... " />
+            <marker date="1451348570287" expanded="true" signature="995:1058" placeholder="INSERT INTO posts... " />
+            <marker date="1451348570287" expanded="true" signature="1384:1418" placeholder="DELETE FROM " />
+            <marker date="1451348570287" expanded="true" signature="1390:1418" placeholder="INSERT INTO posts... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.5">
+          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.09848485">
+          <caret line="8" column="60" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
+          <folding />
         </state>
       </provider>
     </entry>

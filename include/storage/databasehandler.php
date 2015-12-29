@@ -2,13 +2,15 @@
 
 class DatabaseHandler implements Handler {
 
-    private $host = 'localhost';
-    private $userName = 'root';
-    private $password = '1111';
-    private $database = 'blog';
+    private function dbConnection() {
+        return mysqli_connect(Config::$dbSettings['host'],
+            Config::$dbSettings['userName'],
+            Config::$dbSettings['password'],
+            Config::$dbSettings['database']);
+    }
 
     public function getAllPosts() {
-        $connection = mysqli_connect($this->host, $this->userName, $this->password, $this->database);
+        $connection = $this->dbConnection();
 
         $query = "SELECT * FROM posts";
         $result = mysqli_query($connection, $query);
@@ -28,7 +30,7 @@ class DatabaseHandler implements Handler {
     }
 
     public function addPost($data) {
-        $connection = mysqli_connect($this->host, $this->userName, $this->password, $this->database);
+        $connection = $this->dbConnection();
 
         $title = $data->getTitle();
         $content = $data->getContent();
@@ -42,7 +44,7 @@ class DatabaseHandler implements Handler {
         $posts = $this->getAllPosts();
         foreach($posts as $post) {
             if($post->getId() == $id) {
-                $connection = mysqli_connect($this->host, $this->userName, $this->password, $this->database);
+                $connection = $this->dbConnection();
                 $query = "DELETE FROM posts WHERE id = '$id'";
                 $result = mysqli_query($connection, $query);
                 mysqli_close($connection);
