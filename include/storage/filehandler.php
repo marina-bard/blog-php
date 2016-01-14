@@ -1,42 +1,47 @@
 <?php
 
-class FileHandler implements Handler {
-
-    public function getStoragePath() {
+class FileHandler implements Handler
+{
+    public function getStoragePath()
+    {
         return Config::$fileStoragePath;
     }
 
-    public function getAllPosts() {
+    public function getAllPosts()
+    {
         return array_reverse($this->read());
     }
 
-    public function read() {
+    public function read()
+    {
         $file = file_get_contents($this->getStoragePath());
         return $this->formPostsArray(explode("~", $file));
     }
 
-    public function addPost($data) {
+    public function addPost($data)
+    {
         $posts = $this->read();
-        if($posts != null) {
+        if ($posts != null) {
             $id = end($posts)->getId() + 1;
-        }
-        else {
+        } else {
             $id = 0;
         }
+
         $data->setId($id);
         $string = (string)$data;
         file_put_contents($this->getStoragePath(), $string, FILE_APPEND | LOCK_EX);
     }
 
-    public function delete($id) {
+    public function delete($id)
+    {
         $array = $this->read();
         $string = null;
-        for($i = 0; $i < count($array); $i++) {
-            if($array[$i]->getId() != $id) {
+
+        for ($i = 0; $i < count($array); $i++) {
+            if ($array[$i]->getId() != $id) {
                 $post = (string)$array[$i];
                 $string .= $post;
-            }
-            else {
+            } else {
                 $delPos = $i;
             }
         }
@@ -44,17 +49,16 @@ class FileHandler implements Handler {
         file_put_contents($this->getStoragePath(), $string);
     }
 
-    public function formPostsArray($array) {
+    public function formPostsArray($array)
+    {
         $posts = [];
         foreach ($array as $a) {
             list($id, $title, $date, $content) = explode (";", $a);
-            if($title != "")
+            if ($title != "") {
                 $posts[] = new Post($id, $title, $date, $content);
+            }
         }
-
         return $posts;
     }
 
 }
-
-?>

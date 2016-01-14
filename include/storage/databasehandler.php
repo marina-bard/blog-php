@@ -1,22 +1,24 @@
 <?php
 
-class DatabaseHandler implements Handler {
+class DatabaseHandler implements Handler
+{
+    private $connection;
 
-    private function dbConnection() {
-        return mysqli_connect(Config::$dbSettings['host'],
+    public function __construct()
+    {
+        $this->connection = mysqli_connect(Config::$dbSettings['host'],
             Config::$dbSettings['userName'],
             Config::$dbSettings['password'],
             Config::$dbSettings['database']);
     }
 
-    public function getAllPosts() {
-        $connection = $this->dbConnection();
-
+    public function getAllPosts()
+    {
         $query = "SELECT * FROM posts";
-        $result = mysqli_query($connection, $query);
+        $result = mysqli_query($this->connection, $query);
 
         $posts = [];
-        while($post = mysqli_fetch_array($result)) {
+        while ($post = mysqli_fetch_array($result)) {
             $posts[] = new Post((int)$post['id'],
                 $post['title'],
                 $post['date'],
@@ -24,32 +26,30 @@ class DatabaseHandler implements Handler {
         }
 
         mysqli_free_result($result);
-        mysqli_close($connection);
-
         return array_reverse($posts);
     }
 
-    public function addPost($data) {
-        $connection = $this->dbConnection();
+    public function addPost($data)
+    {
+        $title = mysqli_real_escape_string($this->connection, $data->getTitle());
+        $content = mysqli_real_escape_string($this->connection, $data->getContent());
+        $date = mysqli_real_escape_string($this->connection, $data->getDate());
+        $query = "INSERT INTO posts(title, date, content) VALUES ('$title', '$date', '$content')";
 
-        $title = $data->getTitle();
-        $content = $data->getContent();
-        $query = "INSERT INTO posts(title, content) VALUES ('$title', '$content')";
-
-        $result = mysqli_query($connection, $query);
-        mysqli_close($connection);
+        $result = mysqli_query($this->connection, $query);
+        mysqli_free_result($result);
     }
 
-    public function delete($id) {
-        $posts = $this->getAllPosts();
-        foreach($posts as $post) {
-            if($post->getId() == $id) {
-                $connection = $this->dbConnection();
-                $query = "DELETE FROM posts WHERE id = '$id'";
-                $result = mysqli_query($connection, $query);
-                mysqli_close($connection);
-                break;
-            }
-        }
+    public function delete($id)
+    {
+        $id = mysqli_real_escape_string($this->connection, $id);
+        $query = "DELETE FROM posts WHERE id = '$id'";
+        $result = mysqli_query($this->connection, $query);
+        mysqli_free_result($result);
+    }
+
+    public function __destruct()
+    {
+        mysqli_close($this->connection);
     }
 }

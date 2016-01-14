@@ -1,7 +1,7 @@
 <?php
 
-class Config {
-
+class Config
+{
     static $handler = 'json';
 
     static $jsonStoragePath = '../storage/posts.json';
@@ -11,6 +11,6 @@ class Config {
         'host' => "localhost",
         'userName' => 'root',
         'password' => '1111',
-        'database' => 'posts'
+        'database' => 'blog'
     ];
 }

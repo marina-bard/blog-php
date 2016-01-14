@@ -1,20 +1,22 @@
 <?php
 
-class Post implements JsonSerializable{
-
+class Post implements JsonSerializable
+{
     private $id;
     private $title;
     private $content;
     private $date;
 
-    public function __construct($id, $title, $date, $content) {
+    public function __construct($id, $title, $date, $content)
+    {
         $this->id = $id;
         $this->title = $title;
         $this->date = $date;
         $this->content = $content;
     }
 
-    function jsonSerialize() {
+    function jsonSerialize()
+    {
         $data['id'] = $this->id;
         $data['title'] = $this->title;
         $data['date'] = $this->date;
@@ -22,29 +24,33 @@ class Post implements JsonSerializable{
         return $data;
     }
 
-    public function setId($id) {
+    public function setId($id)
+    {
         $this->id = $id;
     }
 
-    public function getTitle() {
+    public function getTitle()
+    {
         return $this->title;
     }
 
-    public function getDate() {
+    public function getDate()
+    {
         return $this->date;
     }
 
-    public function getContent() {
+    public function getContent()
+    {
         return $this->content;
     }
 
-    public function getId() {
+    public function getId()
+    {
         return $this->id;
     }
 
-    public function __toString() {
+    public function __toString()
+    {
         return $this->id.";".$this->title.";".$this->date.";".$this->content."~";
     }
 }
-
-?>

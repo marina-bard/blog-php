@@ -47,7 +47,7 @@
                         <div class="post">
                                 <h3><?php echo $p->getTitle();?></h3>
                                 <em>Published: <?php echo $p->getDate();?></em>
-                                <p><?php echo $p->getContent();?></p>
+                                <p><?php echo nl2br($p->getContent());?></p>
                             <a href="index.php?action=delete&id=<?php echo $p->getId(); ?>">
                                 <input type="button" value="Delete" class="btn btn-info btn-xs">
                             </a>
